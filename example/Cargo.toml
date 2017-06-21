@@ -1,0 +1,11 @@
+[package]
+name = "example"
+version = "0.1.0"
+authors = ["Chris Coutinho <chrisbcoutinho@gmail.com>"]
+
+[dependencies]
+libc = "*"
+
+[lib]
+name = "example_r"
+crate-type = ["dylib"]
