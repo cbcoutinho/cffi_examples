@@ -1,5 +1,6 @@
 
 FF=gfortran
+FF_win=x86_64-w64-mingw32-gfortran
 
 default: clean
 
@@ -34,5 +35,5 @@ python_r: libexample_r.so cffi_r.py
 	LD_LIBRARY_PATH=example/target/debug python3 cffi_r.py
 
 clean:
-	rm -f example.mod *.so *.dll
+	rm -f example.mod *.so *.dll *.o
 	cd example && cargo clean
