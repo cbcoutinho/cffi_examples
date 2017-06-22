@@ -1,3 +1,5 @@
 *.mod
 *.*o
 a.out
+a.exe
+*.dll
