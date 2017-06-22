@@ -1,5 +1,4 @@
-// #include
-// #include
+#include <stdio.h>
 
 extern void* func2(void* arg);
 
