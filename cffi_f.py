@@ -24,3 +24,5 @@ print(str(a[0]), ' + ', str(b[0]), ' = ', clib.adder(a[0], b[0]))
 
 ffi.cdef('int adder_ptr(int *, int *);')
 print(str(a[0]), ' + ', str(b[0]), ' = ', clib.adder_ptr(a, b))
+
+print('Calling adder_ directly')

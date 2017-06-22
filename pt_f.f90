@@ -8,7 +8,7 @@ function func2(arg) bind(c)
    integer*4, pointer :: fptr
 
    address = transfer(arg, address)
-   write(*,'("inside func2 - address: ", "0x",Z8.8)') address
+   write(*,'("inside func2 - address: ", "0x", Z12.12)') address
 
    ! **** create fortran pointer from c-pointer and output the value that is pointed to
    call c_f_pointer(arg, fptr)

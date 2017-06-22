@@ -4,7 +4,7 @@ module example
   implicit none
 
   private
-  public :: adder_c
+  public :: adder_c, adder_c_ptr, adder
 
 contains
   function adder(a, b) result(c)
