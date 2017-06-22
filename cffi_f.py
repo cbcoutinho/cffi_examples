@@ -9,7 +9,7 @@ extension = {'darwin': '.dylib', 'win32': '.dll'}.get(sys.platform, '.so')
 ffi.cdef('int adder(int, int);')
 clib = ffi.dlopen(prefix + 'example_f' + extension)
 
-for i in range(5):
+for i in range(3):
     print('1 + ', str(i), ' = ', clib.adder(1, i))
 
 a = ffi.new("int *")
