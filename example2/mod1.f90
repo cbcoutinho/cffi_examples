@@ -1,26 +1,19 @@
-module example
+module mod1
   use iso_c_binding, only: c_int, c_ptr, c_f_pointer
-
+  use mod2, only: adder_base
   implicit none
 
   private
-  public :: adder_c, adder_c_ptr, adder
+  public :: adder_c, adder_c_ptr
 
 contains
-  function adder(a, b) result(c)
-    integer :: a, b, c
-
-    print*, 'Inside adder'
-    c = a + b
-    print*, 'Finished adding'
-  end function adder
 
   function adder_c(a,b) result(c) bind(c, name='adder')
     integer(c_int), value :: a, b
     integer(c_int)        :: c
 
     print*, 'Inside adder_c, calling adder'
-    c = adder(a,b)
+    c = adder_base(a,b)
     print*, 'Finished calling adder'
     print*,
 
@@ -40,8 +33,8 @@ contains
     print*, 'Inside adder_c_ptr, a_ptr = ', a
     print*, 'Inside adder_c_ptr, b_ptr = ', b
 
-    c = adder(a,b)
+    c = adder_base(a,b)
 
   end function adder_c_ptr
 
-end module example
+end module mod1

@@ -1,3 +1,4 @@
+from __future__ import print_function
 from ctypes import c_int, cdll, byref, c_voidp, pointer
 
 a0 = 2
@@ -6,9 +7,9 @@ b0 = 4
 a = c_int(a0)
 b = c_int(b0)
 
-lib =  cdll.LoadLibrary('./libexample_f.so')
+lib =  cdll.LoadLibrary('./libmod.so')
 
-out = lib.__example_MOD_adder(byref(a), byref(b))
+out = lib.__mod2_MOD_adder_base(byref(a), byref(b))
 print(out)
 print()
 

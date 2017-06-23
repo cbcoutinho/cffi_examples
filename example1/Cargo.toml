@@ -1,5 +1,5 @@
 [package]
-name = "example"
+name = "example1"
 version = "0.1.0"
 authors = ["Chris Coutinho <chrisbcoutinho@gmail.com>"]
 
@@ -7,5 +7,5 @@ authors = ["Chris Coutinho <chrisbcoutinho@gmail.com>"]
 libc = "*"
 
 [lib]
-name = "example_r"
+name = "example1"
 crate-type = ["dylib"]

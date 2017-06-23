@@ -1,3 +1,4 @@
+from __future__ import print_function
 import sys
 import cffi
 
@@ -7,7 +8,7 @@ prefix = {'win32': ''}.get(sys.platform, 'lib')
 extension = {'darwin': '.dylib', 'win32': '.dll'}.get(sys.platform, '.so')
 
 ffi.cdef('int adder(int, int);')
-clib = ffi.dlopen(prefix + 'example_f' + extension)
+clib = ffi.dlopen('./' + prefix + 'mod' + extension)
 
 for i in range(3):
     print('1 + ', str(i), ' = ', clib.adder(1, i))

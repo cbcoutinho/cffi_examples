@@ -33,6 +33,6 @@ program pointertest
 
   call func()
 
-  call sleep(5)
+  ! call sleep(5)
 
 end program
