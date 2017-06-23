@@ -7,7 +7,7 @@ linux: mod2.o mod1.o
 	$(FF) -shared $^ -fPIC -o libmod.so
 	rm -f *.mod *.o
 
-mod1.o: mod1.f90
+mod1.o: mod1.f90 mod2.o
 	$(FF) -c $< -fPIC
 
 mod2.o: mod2.f90
