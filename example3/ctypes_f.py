@@ -7,7 +7,8 @@ b0 = 4
 a = c_int(a0)
 b = c_int(b0)
 
-lib =  cdll.LoadLibrary('./libmod.so')
+#lib =  cdll.LoadLibrary('./libmod.so')
+lib =  cdll.LoadLibrary('mod.dll')
 
 out = lib.__mod2_MOD_adder_base(byref(a), byref(b))
 print(out)
